@@ -26,7 +26,16 @@ function Home(){
     const result = await response.json()
     console.log(result)
     alert(`Abra o console e veja o resultado`)
+
   }
+
+  const { method } = req;
+
+  // This will allow OPTIONS request
+  if (method === "OPTIONS") {
+    return res.status(200).send("ok");
+  }
+
 
   return <div>
     <h1>Home</h1>
