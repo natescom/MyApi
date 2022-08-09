@@ -7,11 +7,14 @@ function Home(){
       last: event.target.last.value,
     }
     const JSONdata = JSON.stringify(data)
-    const endpoint = '/api/tempo'
+    const endpoint = 'https://my-api-eight.vercel.app/api/tempo'
     const options = {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
+        "Accept": "application/json",
+        "Access-Control-Allow-Origin": "*",
+        "Access-Control-Allow-Headers": "Origin, X-Requested-With, Content-Type, Accept"
       },
       body: JSONdata,
     }
