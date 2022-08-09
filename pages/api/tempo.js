@@ -1,10 +1,7 @@
 function tempo(request, response){
 
   const dynamicDate = new Date();
-
-  
   console.log("body", request.body)
-
   
   response.json({
     date: dynamicDate.toTimeString(),
@@ -12,8 +9,6 @@ function tempo(request, response){
     sobrenome: request.body.last
   })
   
-
-  //response.json(JSON.parse(request.body))
 
 }
 
